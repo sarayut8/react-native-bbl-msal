@@ -11,11 +11,11 @@ npm install react-native-bbl-msal
 ## Usage
 
 ```js
-import { multiply } from 'react-native-bbl-msal';
+import { generateDID } from 'react-native-bbl-msal';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = generateDID();
 ```
 
 ## Contributing
