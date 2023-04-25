@@ -16,6 +16,13 @@ import { generateDID } from 'react-native-bbl-msal';
 // ...
 
 const result = generateDID();
+
+// {
+//     DID: 'did...',
+//     privateKey: 'privateKey..',
+//     publicKey: 'publicKey..',
+//     signature: 'signature..',
+// }
 ```
 
 ## Contributing

@@ -1,42 +1,93 @@
 // - MARK: Config
-export function setConfig(config) {
-  return ""
+export function configuration(config: any) {
+  return {
+    organizationId: '',
+    apiKey: '',
+    BASE_ISSUANCE_URL: '',
+    BASE_VERIFIER_URL: '',
+    tenantId: '',
+    ...config,
+  };
 }
 
 // - MARK: DID
 export function generateDID() {
   return {
-    id: 1,
-    name: '',
+    DID: '',
+    privateKey: '',
+    publicKey: '',
+    signature: '',
   };
 }
 
-export function getDID() {
-  return {
-    name: '',
-  };
-}
-
-
-// - MARK: Manifest
+// - MARK: Issuance
 export function getManifest() {
   return {
     id: 1,
-    credential_name: 'BBL Staff Card',
+    credentialName: 'BBL Staff Card',
   };
 }
 
+export function createIssuanceRequest() {
+  return {
+    issuance_id: 1,
+    credentialName: 'BBL Staff Card',
+  };
+}
+
+export function issueVC() {
+  return {
+    issuance_vc_id: 1,
+    credentialName: 'BBL Staff Card',
+  };
+}
+
+// - MARK: Verifier
+export function createPresentationRequest() {
+  return {
+    presentation_id: 1,
+    credentialName: '',
+  };
+}
+
+export function verifyPresentation() {
+  return {
+    verify_id: 1,
+    credentialName: '',
+  };
+}
+
+// - MARK: VC Management
+export function getVCByDeviceID(id: string) {
+  return {
+    deviceID: id,
+    credentialName: '',
+  };
+}
+
+export function deleteCredentail(id: string) {
+  return {
+    id,
+    status: 'delete success.',
+  };
+}
+
+export function reissueCredential(id: string) {
+  return {
+    reissueId: id,
+  };
+}
 
 // - MARK: credentials
-export function getCredentials() {
+export function issuanceLogHistory(id: string) {
   return {
-    credentials_name: '',
+    issuanceLogId: id,
+    status: 'delete success.',
   };
 }
 
-export function getCredentialById(id: string) {
+export function verifyLogHistory(id: string) {
   return {
-    id: id,
-    credentials_name: '',
+    verifyLogId: id,
   };
 }
